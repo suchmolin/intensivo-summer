@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fyr Lois · Programa Intensivo de Verano 2026 — Aprende inglés en 8 semanas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+<style>
+  :root{
+    --navy:#1a237e;
+    --navy-deep:#0f1761;
+    --green:#7ac142;
+    --green-2:#5fa733;
+    --orange:#f5a623;
+    --pink:#e6347e;
+    --yellow:#ffd400;
+    --red:#dc3545;
+    --bg:#fff;
+    --soft:#f4f5f8;
+    --ink:#0e1340;
+    --muted:#6b7196;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:'Montserrat',system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:1200px;margin:0 auto;gap:18px}
+  .logo{display:inline-flex;align-items:center;line-height:0}
+  .logo img{height:38px;width:auto}
+  .ve-tag{display:inline-flex;align-items:center;gap:6px;font-weight:900;font-size:11px;letter-spacing:1.5px;margin-left:14px;color:#fff;vertical-align:middle;background:linear-gradient(90deg,#ffd400 0%,#ffd400 33%,#1a237e 33%,#1a237e 66%,#dc3545 66%);padding:5px 12px;border-radius:6px}
+  .ve-tag::before{content:"VERANO 2026"}
+
+  .cta-pill{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#9ad96a,#5fa733);color:#fff;font-weight:800;font-style:italic;padding:14px 26px;border-radius:999px;box-shadow:0 6px 14px rgba(95,167,51,.35);border:none;cursor:pointer;font-size:15px;transition:transform .15s ease, box-shadow .15s ease}
+  .cta-pill:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(95,167,51,.45)}
+  .cta-pill .wa{width:24px;height:24px;border-radius:50%;background:#fff;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#25d366}
+  .cta-pill .wa img{width:16px;height:16px;display:block}
+  .wa-fab img{width:30px;height:30px;display:block}
+  .cta-pill.orange{background:linear-gradient(180deg,#ffb544,#e08f10);box-shadow:0 6px 14px rgba(245,166,35,.4)}
+  .cta-pill.navy{background:linear-gradient(180deg,#1f6dd6,#0a3d92);box-shadow:0 6px 14px rgba(10,61,146,.35)}
+
+  /* Tilted speed banner (small) */
+  .speed-mini{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,var(--yellow),var(--orange));color:var(--navy-deep);font-weight:900;font-size:11px;letter-spacing:2px;padding:7px 14px;border-radius:6px;margin-bottom:18px;box-shadow:0 4px 12px rgba(245,166,35,.4);transform:rotate(-1deg)}
+  .speed-mini::before{content:"⚡"}
+
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(135deg,#1a237e 0%,#0f1761 100%);color:#fff;overflow:hidden;padding:34px 0 70px}
+  .hero::before{content:"";position:absolute;top:-100px;right:-100px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,.18) 0%,transparent 70%)}
+  .hero::after{content:"";position:absolute;bottom:-150px;left:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(122,193,66,.13) 0%,transparent 70%)}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center;z-index:1}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(245,166,35,.15);border:1px solid rgba(245,166,35,.5);color:var(--yellow);font-weight:900;font-size:11px;letter-spacing:2px;padding:7px 14px;border-radius:999px;margin-bottom:14px}
+  .hero-eyebrow::before{content:"☀️"}
+
+  h1.hero-h{font-size:62px;line-height:.98;letter-spacing:-2px;margin:0 0 18px;color:#fff;font-weight:900}
+  h1.hero-h .or{color:var(--orange)}
+  h1.hero-h .green{color:var(--green);position:relative;display:inline-block}
+  h1.hero-h .green::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:10px;background:rgba(122,193,66,.25);border-radius:4px;z-index:-1}
+  h1.hero-h .y{color:var(--yellow)}
+
+  .hero-sub{font-size:18px;line-height:1.55;color:#dfe4ff;font-weight:500;margin:0 0 18px;max-width:560px}
+  .hero-sub b{color:#fff;font-weight:800}
+  .hero-promise{display:inline-block;font-size:13.5px;color:var(--yellow);font-weight:900;font-style:italic;letter-spacing:.4px;margin:0 0 24px;padding:10px 16px;background:rgba(255,212,0,.1);border-left:3px solid var(--yellow);border-radius:0 8px 8px 0}
+
+  /* Audience toggle (Kids/Adults) */
+  .aud-toggle{display:inline-flex;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:5px;margin-bottom:22px;gap:4px}
+  .aud-toggle button{appearance:none;border:0;background:transparent;color:#bcc3e8;font:800 12px/1 'Montserrat',sans-serif;letter-spacing:.6px;padding:10px 18px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s ease}
+  .aud-toggle button.active{background:linear-gradient(180deg,#ffb544,#e08f10);color:#fff;box-shadow:0 4px 10px rgba(245,166,35,.4)}
+  .aud-toggle button.active.kids{background:linear-gradient(180deg,#9ad96a,#5fa733);box-shadow:0 4px 10px rgba(95,167,51,.4)}
+
+  .hero-ctas{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:28px}
+  .hero-ctas .ghost{font-weight:800;color:#bcc3e8;font-size:12px;letter-spacing:.3px}
+
+  .hero-stats{display:flex;gap:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);max-width:620px}
+  .hero-stats .s{flex:1}
+  .hero-stats .n{font-weight:900;color:var(--green);font-size:30px;letter-spacing:-.5px;line-height:1}
+  .hero-stats .n.or{color:var(--orange)}
+  .hero-stats .n.y{color:var(--yellow)}
+  .hero-stats .l{font-size:11px;font-weight:700;color:#bcc3e8;letter-spacing:.7px;text-transform:uppercase;margin-top:6px;line-height:1.3}
+
+  /* Hero visual — program timeline card */
+  .timeline-card{position:relative;aspect-ratio:1/1.05;background:linear-gradient(135deg,#fff 0%,#f7f9fc 100%);border-radius:24px;padding:30px;box-shadow:0 30px 70px rgba(0,0,0,.4);overflow:hidden;color:var(--ink)}
+  .timeline-card::before{content:"☀️";position:absolute;right:-20px;top:-20px;font-size:120px;opacity:.1}
+  .tc-h{font-weight:900;font-size:11px;letter-spacing:2px;color:var(--orange);margin:0 0 4px}
+  .tc-t{font-weight:900;font-size:22px;color:var(--navy);letter-spacing:-.5px;margin:0 0 20px;line-height:1.1}
+  .tc-step{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px dashed #cdd3e5}
+  .tc-step:first-of-type{border-top:0;padding-top:0}
+  .tc-num{flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#1f6dd6,#0a3d92);color:#fff;font-weight:900;font-size:18px;display:flex;align-items:center;justify-content:center;letter-spacing:-1px}
+  .tc-step.b1 .tc-num{background:linear-gradient(135deg,#9ad96a,#5fa733)}
+  .tc-body h4{margin:0 0 4px;font-weight:900;font-size:14px;color:var(--navy);letter-spacing:.2px}
+  .tc-body .dates{font-weight:800;font-size:11px;color:var(--orange);letter-spacing:.5px;margin:0 0 6px;text-transform:uppercase}
+  .tc-body p{margin:0;font-weight:600;font-size:12.5px;color:var(--muted);line-height:1.5}
+  .tc-foot{margin-top:18px;padding:14px 16px;background:linear-gradient(135deg,#1a237e,#0f1761);color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .tc-foot .lbl{font-weight:900;font-size:10px;letter-spacing:1.5px;color:var(--yellow)}
+  .tc-foot .val{font-weight:900;font-size:18px;letter-spacing:-.3px}
+
+  /* PROMO */
+  .promo{background:linear-gradient(135deg,#1a237e 0%,#0f1761 50%,#f5a623 130%);color:#fff;padding:30px 0;position:relative;overflow:hidden}
+  .promo::before{content:"☀️";position:absolute;left:-10px;top:50%;transform:translateY(-50%);font-size:140px;opacity:.1}
+  .promo::after{content:"⚡";position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:140px;opacity:.1}
+  .promo-row{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;position:relative}
+  .promo-left .pre{margin:0 0 4px;font-weight:900;color:var(--yellow);font-size:13px;letter-spacing:2px}
+  .promo-left .main{margin:0;font-weight:900;font-size:24px;letter-spacing:-.5px;line-height:1.1}
+  .promo-left .sub{margin:6px 0 0;font-weight:700;font-size:13px;color:#fff;opacity:.9}
+  .promo-mid{text-align:center}
+  .promo-mid .price-label{font-weight:900;font-size:11px;letter-spacing:2px;margin:0 0 4px;opacity:.85}
+  .promo-mid .price{font-weight:900;font-size:54px;letter-spacing:-2px;line-height:1;color:var(--yellow);margin:0}
+  .promo-mid .strike{margin:6px 0 0;font-weight:700;font-size:13px;color:#fff;opacity:.85}
+  .flip{display:flex;gap:8px}
+  .flip .digit{position:relative;width:62px;height:80px;border-radius:8px;background:linear-gradient(180deg,#fff 0%,#f0f3fa 50%,#fff 50.1%,#e9ecf1 100%);box-shadow:inset 0 0 0 2px rgba(0,0,0,.06);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:54px;color:var(--navy);overflow:hidden}
+  .flip .digit:first-child{color:var(--orange)}
+  .flip .digit::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:rgba(0,0,0,.18)}
+  .flip-label{text-align:center;color:#fff;font-weight:900;font-size:11px;letter-spacing:1.5px;margin-top:8px}
+
+  /* SECTIONS */
+  .sec{padding:90px 0;position:relative}
+  .sec-eyebrow{display:inline-block;color:var(--green-2);font-weight:900;font-size:12px;letter-spacing:3px;margin:0 0 12px}
+  .sec-eyebrow.or{color:var(--orange)}
+  .sec h2{margin:0 0 14px;color:var(--navy);font-weight:900;font-size:44px;line-height:1.05;letter-spacing:-.8px;max-width:820px}
+  .sec h2 b{color:var(--green)}
+  .sec h2 .or{color:var(--orange)}
+  .sec .lead{margin:0 0 50px;color:#3a4070;font-size:17px;font-weight:500;line-height:1.55;max-width:720px}
+
+  /* PROGRAM STRUCTURE — 2 levels */
+  .levels{background:#f7f9fc}
+  .levels-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:stretch}
+  .level{background:#fff;border-radius:18px;padding:28px;box-shadow:0 14px 30px rgba(15,23,97,.08);border:1px solid #e3e7ef;display:flex;flex-direction:column}
+  .level .head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+  .level .num{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#7ac142,#5fa733);color:#fff;font-weight:900;font-size:22px;display:flex;align-items:center;justify-content:center}
+  .level.b1 .num{background:linear-gradient(135deg,#1f6dd6,#0a3d92)}
+  .level .head h3{margin:0;color:var(--navy);font-weight:900;font-size:22px;letter-spacing:-.3px}
+  .level .dates{display:inline-block;background:linear-gradient(180deg,#fff7e6,#ffeac2);color:var(--orange);font-weight:900;font-size:12.5px;letter-spacing:.5px;padding:8px 14px;border-radius:8px;margin:0 0 16px;border:1px dashed var(--orange)}
+  .level p.desc{margin:0 0 16px;color:#3a4070;font-weight:600;font-size:14px;line-height:1.5}
+  .level p.desc b{color:var(--navy);font-weight:800}
+  .level ul{list-style:none;padding:0;margin:0 0 18px;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;flex:1}
+  .level li{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;font-weight:600;color:var(--ink);line-height:1.35}
+  .level li::before{content:"✓";color:var(--green);font-weight:900;flex-shrink:0}
+  .level.b1 li::before{color:var(--navy)}
+  .level .hrs{margin-top:auto;background:linear-gradient(135deg,#7ac142,#5fa733);color:#fff;font-weight:900;font-size:14px;letter-spacing:.6px;padding:12px 16px;border-radius:10px;text-align:center}
+  .level.b1 .hrs{background:linear-gradient(135deg,#1a237e,#0f1761)}
+  .level-arrow{display:flex;align-items:center;justify-content:center;font-size:32px;color:var(--orange);font-weight:900}
+
+  .totals{display:flex;align-items:center;justify-content:center;gap:0;margin-top:24px;background:#fff;border-radius:14px;padding:18px;border:1px solid #e3e7ef;flex-wrap:wrap;box-shadow:0 8px 20px rgba(15,23,97,.06)}
+  .totals .t{padding:0 28px;text-align:center;border-right:1px solid #e3e7ef}
+  .totals .t:last-child{border-right:0}
+  .totals .lbl{font-weight:900;font-size:10px;letter-spacing:1.5px;color:var(--muted);margin:0 0 2px}
+  .totals .val{font-weight:900;font-size:18px;color:var(--navy);letter-spacing:-.2px}
+  .totals .val .ic{color:var(--orange)}
+
+  /* PILLARS */
+  .pillars{background:#fff}
+  .pil-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .pil{background:#f7f9fc;border-radius:14px;padding:24px 18px;border:1px solid #e3e7ef;border-top:5px solid var(--green);text-align:center}
+  .pil:nth-child(2){border-top-color:var(--orange)}
+  .pil:nth-child(3){border-top-color:var(--navy)}
+  .pil:nth-child(4){border-top-color:var(--pink)}
+  .pil:nth-child(5){border-top-color:var(--red)}
+  .pil .ic{width:46px;height:46px;border-radius:12px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto 14px}
+  .pil:nth-child(2) .ic{background:var(--orange)}
+  .pil:nth-child(3) .ic{background:var(--navy)}
+  .pil:nth-child(4) .ic{background:var(--pink)}
+  .pil:nth-child(5) .ic{background:var(--red)}
+  .pil h3{margin:0 0 8px;font-weight:900;font-size:14px;color:var(--navy);line-height:1.2;letter-spacing:.2px}
+  .pil p{margin:0;color:#3a4070;font-weight:500;font-size:12.5px;line-height:1.5}
+
+  /* AUDIENCE PANES — Kids vs Adults */
+  .foryou{background:linear-gradient(180deg,#fff 0%,#f7f9fc 100%);padding:90px 0}
+  .aud-tabs{display:flex;gap:10px;margin:30px 0 30px;justify-content:center;flex-wrap:wrap}
+  .aud-tabs button{appearance:none;border:2px solid #e3e7ef;background:#fff;color:var(--navy);font:900 13px/1 'Montserrat',sans-serif;letter-spacing:.6px;padding:14px 24px;border-radius:999px;cursor:pointer;display:flex;align-items:center;gap:10px;transition:all .2s ease;text-transform:uppercase}
+  .aud-tabs button .ic{font-size:18px}
+  .aud-tabs button.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+  .aud-tabs button.active.kids{background:var(--green);border-color:var(--green)}
+
+  .aud-pane{display:none}
+  .aud-pane.active{display:block}
+  .aud-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+  .aud-text h3{margin:0 0 14px;color:var(--navy);font-weight:900;font-size:30px;letter-spacing:-.5px;line-height:1.1}
+  .aud-text h3 b{color:var(--green)}
+  .aud-text h3 .or{color:var(--orange)}
+  .aud-text .desc{margin:0 0 22px;color:#3a4070;font-size:15px;font-weight:500;line-height:1.6}
+  .aud-text .desc b{color:var(--navy);font-weight:800}
+  .aud-text ul{list-style:none;padding:0;margin:0 0 26px;display:flex;flex-direction:column;gap:10px}
+  .aud-text li{display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:600;color:var(--ink);line-height:1.4}
+  .aud-text li::before{content:"✓";color:var(--green);font-weight:900;flex-shrink:0;font-size:16px}
+  .aud-pane.adults .aud-text li::before{color:var(--orange)}
+  .aud-text .who{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+  .aud-text .who .chip{background:#f4f5f8;color:var(--navy);font-weight:800;font-size:11.5px;letter-spacing:.5px;padding:8px 14px;border-radius:999px;border:1px solid #e3e7ef}
+  .aud-text .who .chip.hot{background:#fff7e6;color:var(--orange);border-color:#f5d2a3}
+
+  .aud-vis{position:relative;background:#fff;border-radius:18px;padding:24px;border:1px solid #e3e7ef;box-shadow:0 14px 30px rgba(15,23,97,.08)}
+  .aud-vis .pre{font-weight:900;font-size:11px;letter-spacing:2px;color:var(--orange);margin:0 0 8px}
+  .aud-vis .ttl{font-weight:900;font-size:18px;color:var(--navy);letter-spacing:-.3px;margin:0 0 16px}
+  .aud-vis .feat{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:1px dashed #cdd3e5}
+  .aud-vis .feat:first-of-type{border-top:0;padding-top:0}
+  .aud-vis .feat .ic{flex-shrink:0;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#7ac142,#5fa733);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900}
+  .aud-pane.adults .aud-vis .feat .ic{background:linear-gradient(135deg,#ffb544,#e08f10)}
+  .aud-vis .feat h5{margin:0 0 2px;font-weight:900;font-size:13px;color:var(--navy)}
+  .aud-vis .feat p{margin:0;font-weight:600;font-size:12px;color:var(--muted);line-height:1.45}
+
+  /* SCHEDULE */
+  .sched{background:#fff;padding:90px 0}
+  .sched-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .sched-h h2{margin:0 0 14px;color:var(--navy);font-weight:900;font-size:42px;letter-spacing:-.7px;line-height:1.05}
+  .sched-h h2 b{color:var(--orange)}
+  .sched-h p{margin:0 0 24px;color:#3a4070;font-size:16px;font-weight:500;line-height:1.55}
+  .turns{display:flex;flex-direction:column;gap:14px}
+  .turn{background:linear-gradient(135deg,#fff7e6 0%,#fff 100%);border:2px dashed var(--orange);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:18px}
+  .turn .ic{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,#ffb544,#e08f10);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px}
+  .turn.night .ic{background:linear-gradient(135deg,#1f6dd6,#0a3d92)}
+  .turn h4{margin:0 0 4px;font-weight:900;font-size:12px;color:var(--orange);letter-spacing:1.5px;text-transform:uppercase}
+  .turn.night h4{color:var(--navy)}
+  .turn .hours{font-weight:900;font-size:22px;color:var(--navy);letter-spacing:-.5px}
+
+  .details{background:#f7f9fc;border-radius:18px;padding:28px;border:1px solid #e3e7ef}
+  .details h3{margin:0 0 18px;color:var(--navy);font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase}
+  .details .row{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-top:1px dashed #cdd3e5}
+  .details .row:first-of-type{border-top:0;padding-top:0}
+  .details .row .ic{flex-shrink:0;width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#9ad96a,#5fa733);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900}
+  .details .row .lbl{font-weight:900;font-size:11px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase;margin:0 0 2px}
+  .details .row .val{font-weight:800;font-size:14px;color:var(--navy);letter-spacing:-.1px}
+
+  /* WHY US */
+  .why{background:linear-gradient(135deg,#1a237e 0%,#0f1761 100%);color:#fff;padding:90px 0;position:relative;overflow:hidden}
+  .why::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1300px;height:1300px;background:radial-gradient(circle,rgba(245,166,35,.1) 0%,transparent 60%)}
+  .why-h{position:relative;text-align:center;margin-bottom:46px}
+  .why-h .pre{color:var(--yellow);font-weight:900;font-size:12px;letter-spacing:3px;margin:0 0 14px;display:inline-block}
+  .why-h h2{color:#fff;font-weight:900;font-size:42px;line-height:1.05;letter-spacing:-1px;margin:0 auto;max-width:780px}
+  .why-h h2 .y{color:var(--yellow)}
+  .why-h h2 .g{color:var(--green)}
+  .why-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:30px 26px}
+  .why-card .ic{width:64px;height:64px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:14px;padding:6px}
+  .why-card .ic img{width:100%;height:100%;object-fit:contain;display:block}
+  .why-card h3{margin:0 0 8px;font-weight:900;font-size:18px;color:#fff;letter-spacing:-.2px;line-height:1.25}
+  .why-card p{margin:0;color:#bcc3e8;font-weight:500;font-size:14px;line-height:1.55}
+  .why-card p b{color:#fff;font-weight:800}
+
+  /* SEDES */
+  .sedes{background:#fff;border-top:1px solid #e3e7ef;border-bottom:1px solid #e3e7ef}
+  .sedes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;align-items:start}
+  .sede{text-align:center}
+  .sede h3{margin:0 0 12px;color:var(--navy);font-weight:900;font-size:clamp(15px,1.5vw,18px);letter-spacing:.5px;text-transform:uppercase;line-height:1.15}
+  .sede .pic{border-radius:16px 16px 16px 8px;overflow:hidden;aspect-ratio:509/528;box-shadow:0 14px 30px rgba(15,23,97,.1);border:1px solid #e3e7ef}
+  .sede .pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .sede h4{margin:14px 0 8px;color:var(--orange);font-weight:900;font-size:13px;letter-spacing:1px;text-transform:uppercase}
+  .sede p{margin:0;color:var(--navy);font-weight:700;font-size:11.5px;line-height:1.45;text-transform:uppercase;letter-spacing:.28px}
+
+  /* TESTIMONIALS */
+  .testi{padding:90px 0;background:#fff}
+  .testi-h{text-align:center;margin-bottom:46px}
+  .testi-h .pre{color:var(--orange);font-weight:900;font-size:12px;letter-spacing:3px;margin:0 0 12px;display:inline-block}
+  .testi-h h2{margin:0;color:var(--navy);font-weight:900;font-size:38px;letter-spacing:-.5px}
+  .testi-h h2 b{color:var(--green)}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1180px;margin:0 auto}
+  .quote{position:relative;background:#f7f9fc;border-radius:16px;padding:34px 28px 26px;color:var(--navy);border:1px solid #e3e7ef}
+  .quote .qm{position:absolute;font-size:60px;line-height:1;color:var(--green);font-weight:900;font-family:Georgia,serif;top:8px;left:18px}
+  .quote .tag{position:absolute;top:16px;right:16px;font-weight:900;font-size:9.5px;letter-spacing:1.2px;padding:4px 9px;border-radius:4px;background:var(--orange);color:#fff}
+  .quote .tag.adult{background:var(--navy)}
+  .quote .tag.kid{background:var(--green)}
+  .quote p{color:var(--navy);font-weight:600;font-size:14px;line-height:1.55;margin:34px 0 18px}
+  .quote .who{display:flex;align-items:center;gap:12px}
+  .quote .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#cfd6e2,#dde2ec);border:2px solid #fff;flex-shrink:0;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+  .quote .name{color:var(--navy);font-weight:900;font-size:13px}
+  .quote .meta{color:var(--muted);font-weight:700;font-size:11px;letter-spacing:.3px}
+  .quote .stars{color:var(--orange);font-size:13px;margin-top:2px}
+
+  /* FAQ */
+  .faq{padding:80px 0 60px;background:#f7f9fc}
+  .faq h2{margin:0 0 30px;text-align:center;color:var(--navy);font-weight:900;font-size:34px;letter-spacing:.3px}
+  .faq h2 b{color:var(--orange)}
+  .faq-list{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+  .qa{background:#fff;border-radius:12px;padding:14px 22px;border-left:6px solid var(--orange);border-right:6px solid var(--navy);cursor:pointer}
+  .qa:nth-child(even){border-left-color:var(--navy);border-right-color:var(--green)}
+  .qa .qrow{display:flex;align-items:center;justify-content:space-between;gap:18px}
+  .qa .q{color:var(--navy);font-weight:900;font-size:13.5px;letter-spacing:.3px;margin:0}
+  .qa .chev{color:var(--navy);font-weight:900;font-size:18px;transition:transform .2s ease}
+  .qa .a{color:var(--navy);font-weight:600;font-size:13px;line-height:1.55;margin:0;max-height:0;overflow:hidden;transition:max-height .25s ease, margin .25s ease}
+  .qa.open .a{max-height:320px;margin-top:8px}
+  .qa.open .chev{transform:rotate(180deg)}
+
+  /* FINAL CTA */
+  .final{padding:100px 0;background:linear-gradient(135deg,#1a237e 0%,#0f1761 50%,#f5a623 130%);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .final::before{content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:500px;background:radial-gradient(circle,rgba(255,212,0,.2) 0%,transparent 70%)}
+  .final::after{content:"☀️";position:absolute;right:8%;top:18%;font-size:80px;opacity:.12}
+  .final h2{margin:0 0 14px;font-weight:900;font-size:48px;letter-spacing:-1px;position:relative;line-height:1.05}
+  .final h2 .y{color:var(--yellow)}
+  .final h2 .g{color:var(--green)}
+  .final p{margin:0 0 30px;color:#dfe4ff;font-weight:600;font-size:17px;position:relative;max-width:620px;margin-left:auto;margin-right:auto;line-height:1.55}
+  .final p b{color:var(--yellow);font-weight:900}
+  .final .row{position:relative;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center}
+  .final .cta-pill{font-size:16px;padding:18px 36px}
+  .final .meta{margin-top:20px;color:#bcc3e8;font-weight:700;font-size:12px;letter-spacing:.5px;position:relative}
+
+  /* WA fab */
+  .wa-fab{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(37,211,102,.45);z-index:50;cursor:pointer;border:none}
+  .wa-fab::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid #25d366;opacity:.5;animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.15);opacity:0}}
+
+  footer{background:#0a0f3d;color:#9aa0c8;padding:30px 0;font-size:12px;font-weight:600}
+  footer .row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .social-links{display:flex;align-items:center;gap:12px}
+  .social-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.06);transition:background .15s ease}
+  .social-links a:hover{background:rgba(255,255,255,.14)}
+  .social-links img{width:20px;height:20px;display:block}
+
+  @media (max-width:980px){
+    .hero-grid,.levels-grid,.aud-grid,.why-grid,.testi-grid,.sched-grid,.pil-grid{grid-template-columns:1fr}
+    .sedes-grid{grid-template-columns:repeat(2,1fr)}
+    .level-arrow{transform:rotate(90deg)}
+    h1.hero-h{font-size:42px}
+    .promo-row{grid-template-columns:1fr;text-align:center}
+    .why-h h2,.sched-h h2,.final h2{font-size:32px}
+    .level ul{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .sedes-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-M5B53KKW");
+</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-M5B53KKW"
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  ></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="nav">
+  <div>
+    <a href="#" class="logo" aria-label="Fyr Lois">
+      <img src="logo-fyrlois.svg" alt="Fyr Lois" width="140" height="53">
+    </a>
+    <span class="ve-tag"></span>
+  </div>
+  <a class="cta-pill whatsapp-link" href="#wa">
+    <span class="wa">
+      <img src="social-icons-WA Green.svg" alt="" width="16" height="16">
+    </span>
+    Reservar mi cupo
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="speed-mini">INTENSIVO RÁPIDO · APRENDE EL DOBLE DE RÁPIDO</div>
+      <div><span class="hero-eyebrow">PROGRAMA INTENSIVO DE VERANO 2026</span></div>
+      <h1 class="hero-h">Aprende inglés en <span class="or">8 semanas</span> — de cero a <span class="green">A1.</span></h1>
+      <p class="hero-sub">96 horas académicas, clases <b>en vivo</b> con profesores certificados, método comunicacional. <b>Para niños y adultos.</b> Aprovechas el verano y arrancas septiembre hablando inglés — no esperando otro año más para empezar.</p>
+      <p class="hero-promise">⚡ Inscríbete antes del 13 de julio · cupos limitados por grupo</p>
+
+      <div class="aud-toggle" id="audToggleHero">
+        <button class="active kids" data-aud="kids"><span class="ic">🎒</span> Para Niños</button>
+        <button data-aud="adults"><span class="ic">👨‍💼</span> Para Adultos</button>
+      </div>
+
+      <div class="hero-ctas">
+        <button class="cta-pill whatsapp-link" type="button">
+          <span class="wa">
+            <img src="social-icons-WA Green.svg" alt="" width="16" height="16">
+          </span>
+          Quiero información del intensivo
+        </button>
+        <span class="ghost">⏱ Respuesta por WhatsApp en menos de 10 min</span>
+      </div>
+
+      <div class="hero-stats">
+        <div class="s"><div class="n y">96</div><div class="l">Horas académicas</div></div>
+        <div class="s"><div class="n or">8</div><div class="l">Semanas</div></div>
+        <div class="s"><div class="n">2</div><div class="l">Niveles · Intro + A1</div></div>
+        <div class="s"><div class="n">4</div><div class="l">Días por semana</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="timeline-card">
+        <p class="tc-h">RUTA DEL PROGRAMA · 2026</p>
+        <p class="tc-t">De nivel introductorio a A1 en 8 semanas.</p>
+        <div class="tc-step">
+          <div class="tc-num">1</div>
+          <div class="tc-body">
+            <p class="dates">20 JUL — 14 AGO · 4 semanas</p>
+            <h4>Nivel Introductorio</h4>
+            <p>Pronunciación, saludos, vocabulario esencial, verbo to be, primeras conversaciones guiadas.</p>
+          </div>
+        </div>
+        <div class="tc-step b1">
+          <div class="tc-num">2</div>
+          <div class="tc-body">
+            <p class="dates">17 AGO — 11 SEP · 4 semanas</p>
+            <h4>Nivel A1 (MCER)</h4>
+            <p>Presente simple, preguntas y respuestas, rutinas, preposiciones, conversaciones funcionales reales.</p>
+          </div>
+        </div>
+        <div class="tc-foot">
+          <div>
+            <div class="lbl">TOTAL DEL PROGRAMA</div>
+            <div class="val">96 horas · Certificado Fyr Lois</div>
+          </div>
+          <div style="font-size:32px">☀️</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section class="promo">
+  <div class="wrap promo-row">
+    <div class="promo-left">
+      <p class="pre">☀️ VERANO 2026 · CUPOS LIMITADOS</p>
+      <p class="main">Programa completo · 8 semanas · <b>Niños y adultos</b></p>
+      <p class="sub">Online en vivo · Material digital · Certificado Fyr Lois al finalizar</p>
+    </div>
+    <div>
+      <div class="flip" id="flip">
+        <div class="digit" id="d1">0</div>
+        <div class="digit" id="d2">3</div>
+        <div class="digit" id="d3">2</div>
+      </div>
+      <p class="flip-label">CUPOS DISPONIBLES POR GRUPO</p>
+    </div>
+    <div class="promo-mid">
+      <p class="price-label">2 NIVELES POR EL PRECIO DE 1</p>
+      <p class="strike" style="text-decoration:line-through;opacity:.7;font-size:14px;margin:0">$1,920 · precio regular 2 cursos</p>
+      <p class="price">$960</p>
+      <p class="strike">8 SEMANAS · 96 HORAS · 50% DTO. VERANO</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM STRUCTURE -->
+<section class="sec levels">
+  <div class="wrap" style="text-align:center">
+    <span class="sec-eyebrow or">ESTRUCTURA DEL PROGRAMA</span>
+    <h2 style="margin:0 auto 14px;color:var(--navy);font-weight:900;font-size:42px;letter-spacing:-.8px;max-width:780px;line-height:1.05">Dos niveles. <b>Una transformación.</b></h2>
+    <p style="margin:0 auto 40px;color:#3a4070;font-size:16px;font-weight:500;line-height:1.55;max-width:680px">El programa está dividido en dos módulos de 4 semanas. Empiezas en julio sin hablar inglés y terminas en septiembre con nivel A1 del Marco Común Europeo (MCER) certificado.</p>
+  </div>
+  <div class="wrap">
+    <div class="levels-grid">
+      <div class="level">
+        <div class="head">
+          <div class="num">1</div>
+          <h3>Nivel Introductorio</h3>
+        </div>
+        <span class="dates">📅 20 de julio al 14 de agosto · 4 semanas</span>
+        <p class="desc">Construyes la base para comunicarte en inglés desde el primer día — sin tecnicismos.</p>
+        <ul>
+          <li>Pronunciación inicial</li>
+          <li>Saludos y presentaciones</li>
+          <li>Verbo to be y pronombres</li>
+          <li>Números, días y meses</li>
+          <li>Vocabulario esencial</li>
+          <li>Preguntas básicas</li>
+          <li>Primeras conversaciones guiadas</li>
+          <li>Construcción de oraciones simples</li>
+        </ul>
+        <div class="hrs">⏱ 48 HORAS ACADÉMICAS</div>
+      </div>
+      <div class="level-arrow">→</div>
+      <div class="level b1">
+        <div class="head">
+          <div class="num">2</div>
+          <h3>Nivel A1 (MCER)</h3>
+        </div>
+        <span class="dates">📅 17 de agosto al 11 de septiembre · 4 semanas</span>
+        <p class="desc">Empiezas a comunicarte con <b>más estructura y confianza</b> en situaciones reales.</p>
+        <ul>
+          <li>Presente simple</li>
+          <li>Can / can't</li>
+          <li>Preguntas y respuestas</li>
+          <li>There is / there are</li>
+          <li>Rutinas diarias</li>
+          <li>Preposiciones básicas</li>
+          <li>Gustos y preferencias</li>
+          <li>Conversaciones funcionales</li>
+        </ul>
+        <div class="hrs">⏱ 48 HORAS ACADÉMICAS</div>
+      </div>
+    </div>
+    <div class="totals">
+      <div class="t"><div class="lbl">TOTAL DEL PROGRAMA</div><div class="val"><span class="ic">🎓</span> 96 HORAS ACADÉMICAS</div></div>
+      <div class="t"><div class="lbl">DURACIÓN</div><div class="val">8 SEMANAS COMPLETAS</div></div>
+      <div class="t"><div class="lbl">FRECUENCIA</div><div class="val">4 DÍAS POR SEMANA</div></div>
+      <div class="t"><div class="lbl">AL FINALIZAR</div><div class="val">CERTIFICADO FYR LOIS</div></div>
+    </div>
+    <div style="margin-top:18px;background:linear-gradient(135deg,#fff7e6 0%,#fff 100%);border:2px dashed var(--orange);border-radius:14px;padding:18px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;text-align:center">
+      <div style="font-size:26px">📚</div>
+      <p style="margin:0;color:var(--navy);font-weight:800;font-size:14px;line-height:1.5;max-width:680px">¿Ya estás en otro nivel? <b style="color:var(--orange)">Abrimos grupos intensivos en A2, B1, B2 y C1</b> según demanda. Escríbenos por WhatsApp con tu nivel actual y te confirmamos disponibilidad este verano.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE PANES -->
+<section class="foryou">
+  <div class="wrap" style="text-align:center">
+    <span class="sec-eyebrow or">UN PROGRAMA, DOS REALIDADES</span>
+    <h2 style="margin:0 auto;color:var(--navy);font-weight:900;font-size:42px;letter-spacing:-.8px;max-width:780px;line-height:1.05">Para los niños. <b>Y para ti también.</b></h2>
+    <p style="margin:14px auto 0;color:#3a4070;font-size:16px;font-weight:500;line-height:1.55;max-width:640px">Mismo método, mismas 96 horas, mismos profesores certificados — adaptado al niño que aprovecha vacaciones y al adulto que por fin tiene tiempo para él mismo.</p>
+
+    <div class="aud-tabs" id="audTabs">
+      <button class="active kids" data-pane="kids"><span class="ic">🎒</span> Para Niños y Adolescentes</button>
+      <button data-pane="adults"><span class="ic">👨‍💼</span> Para Adultos</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- KIDS PANE -->
+    <div class="aud-pane active kids" data-pane="kids">
+      <div class="aud-grid">
+        <div class="aud-text">
+          <h3>Tu hijo no pierde el verano — lo <b>convierte en ventaja</b>.</h3>
+          <p class="desc">Mientras otros niños se pasan tres meses sin tocar el inglés y olvidan lo del año pasado, el tuyo termina septiembre <b>un nivel completo por delante</b>. Sin tareas del colegio compitiendo por su atención, con profesor real en vivo, en grupos pequeños donde sí participa. No es campamento de "play and learn" — es un programa serio con resultados medibles.</p>
+          <div class="who">
+            <span class="chip hot">⭐ Verano productivo</span>
+            <span class="chip">Niños 7-12</span>
+            <span class="chip">Adolescentes 13-17</span>
+            <span class="chip">Refuerzo escolar</span>
+            <span class="chip">Apoyo TOEFL/Cambridge</span>
+          </div>
+          <ul>
+            <li>Grupos por edad — no mezcla niños chiquitos con adolescentes</li>
+            <li>Profesores certificados TEFL/Celta · método comunicacional</li>
+            <li>Reporte para padres cada 2 semanas</li>
+            <li>Material digital incluido · sin libros caros</li>
+            <li>Certificado Fyr Lois al finalizar, equivalente A1 MCER</li>
+          </ul>
+          <button class="cta-pill whatsapp-link" type="button">
+            <span class="wa">
+              <img src="social-icons-WA Green.svg" alt="" width="16" height="16">
+            </span>
+            Quiero info para mi hijo
+          </button>
+        </div>
+        <div class="aud-vis">
+          <p class="pre">QUÉ PASA EN 8 SEMANAS</p>
+          <p class="ttl">El cambio real en tu hijo</p>
+          <div class="feat">
+            <div class="ic">1</div>
+            <div><h5>Semana 1-2 · Pierde el miedo</h5><p>Habla en inglés desde el día 1 — sin vergüenza, en grupo pequeño donde nadie se ríe.</p></div>
+          </div>
+          <div class="feat">
+            <div class="ic">2</div>
+            <div><h5>Semana 3-4 · Empieza a construir</h5><p>Saluda, se presenta, cuenta su día. Termina nivel introductorio con base sólida.</p></div>
+          </div>
+          <div class="feat">
+            <div class="ic">3</div>
+            <div><h5>Semana 5-6 · Estructura A1</h5><p>Presente simple, rutinas, preguntas — empieza a tener conversaciones reales.</p></div>
+          </div>
+          <div class="feat">
+            <div class="ic">4</div>
+            <div><h5>Semana 7-8 · Llega al colegio listo</h5><p>Conversaciones funcionales en inglés · ventaja real ante sus compañeros.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADULTS PANE -->
+    <div class="aud-pane adults" data-pane="adults">
+      <div class="aud-grid">
+        <div class="aud-text">
+          <h3>Llevas <span class="or">años</span> diciendo "el otro año empiezo inglés". Este verano <b>empiezas.</b></h3>
+          <p class="desc">8 semanas. No 2 años de academia que nunca terminas. No una app que abandonas en febrero. Un programa intensivo con profesor real, grupo pequeño, y un final claro: <b>septiembre con nivel A1 certificado</b>. Sin tener que mudarte al exterior, sin pagar un dineral, sin sentir vergüenza con compañeros mucho más jóvenes.</p>
+          <div class="who">
+            <span class="chip hot">⭐ Empezar de cero</span>
+            <span class="chip">Profesionales</span>
+            <span class="chip">Madres y padres</span>
+            <span class="chip">Universitarios</span>
+            <span class="chip">Emprendedores</span>
+            <span class="chip">Jubilados</span>
+          </div>
+          <ul>
+            <li>Sin importar edad — grupos heterogéneos, todos empezando juntos</li>
+            <li>Horario mañana o tarde según tu trabajo</li>
+            <li>Profesores certificados TEFL · método comunicacional, no gramatical</li>
+            <li>Material digital incluido · estudias desde el celular o computadora</li>
+            <li>Certificado Fyr Lois A1 MCER al finalizar — sirve para CV y solicitudes</li>
+          </ul>
+          <button class="cta-pill orange whatsapp-link" type="button">
+            <span class="wa">
+              <img src="social-icons-WA Green.svg" alt="" width="16" height="16">
+            </span>
+            Quiero info para mí
+          </button>
+        </div>
+        <div class="aud-vis">
+          <p class="pre">QUÉ LOGRAS EN 8 SEMANAS</p>
+          <p class="ttl">Tu transformación real</p>
+          <div class="feat">
+            <div class="ic">1</div>
+            <div><h5>Semana 1-2 · Rompes el "no sé nada"</h5><p>Sabes saludar, presentarte, pedir lo esencial. Por primera vez sientes que puedes.</p></div>
+          </div>
+          <div class="feat">
+            <div class="ic">2</div>
+            <div><h5>Semana 3-4 · Construyes base sólida</h5><p>Verbos básicos, vocabulario clave, primeras frases completas sin pensarle tanto.</p></div>
+          </div>
+          <div class="feat">
+            <div class="ic">3</div>
+            <div><h5>Semana 5-6 · Empiezas a comunicarte</h5><p>Hablas en presente simple, haces preguntas, respondes. Conversación real, no memorizada.</p></div>
+          </div>
+          <div class="feat">
+            <div class="ic">4</div>
+            <div><h5>Semana 7-8 · Cierras con nivel A1</h5><p>Certificado oficial Fyr Lois · A1 MCER · listo para nivel A2 o para entrevistas básicas.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="sec pillars">
+  <div class="wrap" style="text-align:center;margin-bottom:46px">
+    <span class="sec-eyebrow">POR QUÉ ELEGIR FYR LOIS</span>
+    <h2 style="margin:0 auto;color:var(--navy);font-weight:900;font-size:42px;letter-spacing:-.8px;max-width:780px;line-height:1.05">Lo que recibes <b>en cada clase.</b></h2>
+  </div>
+  <div class="wrap">
+    <div class="pil-grid">
+      <div class="pil">
+        <div class="ic">💬</div>
+        <h3>Clases en vivo</h3>
+        <p>Interactúas en tiempo real con profesores certificados — sin grabaciones ni bots.</p>
+      </div>
+      <div class="pil">
+        <div class="ic">🗣</div>
+        <h3>Método comunicacional</h3>
+        <p>Enfocado en hablar, escuchar y comprender desde el primer día — no en gramática teórica.</p>
+      </div>
+      <div class="pil">
+        <div class="ic">📈</div>
+        <h3>Progreso estructurado</h3>
+        <p>Cada semana tiene objetivos claros, práctica real y evaluación continua de tu avance.</p>
+      </div>
+      <div class="pil">
+        <div class="ic">👥</div>
+        <h3>Grupos reducidos</h3>
+        <p>Garantizamos participación, atención personalizada y mejores resultados para cada alumno.</p>
+      </div>
+      <div class="pil">
+        <div class="ic">🎓</div>
+        <h3>Certificado Fyr Lois</h3>
+        <p>Al finalizar recibes el certificado de aprobación equivalente al nivel A1 del MCER.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="sched">
+  <div class="wrap sched-grid">
+    <div class="sched-h">
+      <span class="sec-eyebrow or">HORARIOS Y DETALLES</span>
+      <h2>Elige el turno que <b>te queda</b>.</h2>
+      <p>Dos turnos a elegir, de lunes a jueves. Todas las clases son <b>en vivo</b> con profesor en pantalla — no grabaciones. Si necesitas ajustes por viaje o agenda, hablamos.</p>
+      <div class="turns">
+        <div class="turn">
+          <div class="ic">☀️</div>
+          <div>
+            <h4>TURNO MAÑANA</h4>
+            <div class="hours">9:00 AM — 12:00 PM</div>
+          </div>
+        </div>
+        <div class="turn night">
+          <div class="ic">🌙</div>
+          <div>
+            <h4>TURNO TARDE</h4>
+            <div class="hours">3:00 PM — 6:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="details">
+      <h3>📋 DETALLES DEL PROGRAMA</h3>
+      <div class="row"><div class="ic">📅</div><div><div class="lbl">FECHA DE INICIO</div><div class="val">20 de julio de 2026</div></div></div>
+      <div class="row"><div class="ic">🏁</div><div><div class="lbl">FECHA DE FINALIZACIÓN</div><div class="val">11 de septiembre de 2026</div></div></div>
+      <div class="row"><div class="ic">⏱</div><div><div class="lbl">DURACIÓN</div><div class="val">8 semanas · 96 horas académicas</div></div></div>
+      <div class="row"><div class="ic">🗓</div><div><div class="lbl">FRECUENCIA</div><div class="val">4 días por semana</div></div></div>
+      <div class="row"><div class="ic">💻</div><div><div class="lbl">MODALIDAD</div><div class="val">Clases en vivo (online)</div></div></div>
+      <div class="row"><div class="ic">📦</div><div><div class="lbl">INCLUYE</div><div class="val">Material digital · evaluaciones · certificado</div></div></div>
+      <div class="row"><div class="ic">📊</div><div><div class="lbl">NIVELES</div><div class="val">Introductorio + A1 (MCER)</div></div></div>
+      <div class="row"><div class="ic">💵</div><div><div class="lbl">INVERSIÓN</div><div class="val">$960 · 2 niveles (precio regular $1,920) · + material aparte</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="wrap">
+    <div class="why-h">
+      <span class="pre">RESPALDADO POR 27 AÑOS</span>
+      <h2>Más de <span class="y">100.000 estudiantes</span><br>ya hablan inglés con <span class="g">Fyr Lois</span>.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="ic"><img src="seal-27-years.png" alt="27 años de trayectoria Fyr Lois" width="52" height="52"></div>
+        <h3>27 años enseñando inglés</h3>
+        <p>Fundada en 1999. Hemos visto pasar metodologías, apps y modas — y seguimos enseñando <b>como funciona de verdad</b>: profesor humano, grupos pequeños, conversación real.</p>
+      </div>
+      <div class="why-card">
+        <div class="ic"><img src="seal-cefr.png" alt="Marco Común Europeo CEFR A1-C2" width="52" height="52"></div>
+        <h3>Método CEFR certificado</h3>
+        <p>El estándar europeo (A1, A2, B1, B2, C1, C2) que usan universidades y empleadores serios en todo el mundo. <b>Tu nivel es oficial</b>, no una barra de progreso.</p>
+      </div>
+      <div class="why-card">
+        <div class="ic"><img src="seal-tefl.png" alt="Profesores certificados TEFL" width="52" height="52"></div>
+        <h3>Profesores TEFL/Celta</h3>
+        <p>Todos los profesores tienen certificación internacional. <b>No es la prima que viajó a Miami</b> — son docentes profesionales con experiencia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEDES -->
+<section class="sec sedes" id="sedes">
+  <div class="wrap" style="text-align:center;margin-bottom:46px">
+    <span class="sec-eyebrow or">FYR LOIS EN VENEZUELA</span>
+    <h2 style="margin:0 auto;color:var(--navy);font-weight:900;font-size:42px;letter-spacing:-.8px;max-width:780px;line-height:1.05">Sedes <b>principales</b></h2>
+    <p style="margin:14px auto 0;color:#3a4070;font-size:16px;font-weight:500;line-height:1.55;max-width:680px">El Programa Intensivo de Verano es 100% online en vivo; estas son nuestras sedes físicas para información, evaluaciones de nivel y todo lo que necesites de forma presencial.</p>
+  </div>
+  <div class="wrap">
+    <div class="sedes-grid">
+      <article class="sede">
+        <h3>Caracas</h3>
+        <div class="pic"><img src="ccct.png" alt="Exterior del centro comercial CCCT en Caracas" width="509" height="528" loading="lazy" decoding="async"></div>
+        <h4>CCCT</h4>
+        <p>Centro Ciudad Comercial Tamanaco, sector Yarey, planta baja, local PB 005.</p>
+      </article>
+      <article class="sede">
+        <h3>Caracas</h3>
+        <div class="pic"><img src="ucab.png" alt="Campus UCAB Montalbán" width="509" height="528" loading="lazy" decoding="async"></div>
+        <h4>UCAB</h4>
+        <p>UCAB Montalbán, módulo 1, piso 5, oficina A1-53.</p>
+      </article>
+      <article class="sede">
+        <h3>Barquisimeto</h3>
+        <div class="pic"><img src="nuevasegovia.png" alt="Torre y zona de Nueva Segovia en Barquisimeto" width="509" height="528" loading="lazy" decoding="async"></div>
+        <h4>Nueva Segovia</h4>
+        <p>Multicentro empresarial Crystal Plaza, torre B, 1er piso, local 1-B.</p>
+      </article>
+      <article class="sede">
+        <h3>Puerto Ordaz</h3>
+        <div class="pic"><img src="altavista.png" alt="Centro comercial Alta Vista en Puerto Ordaz" width="509" height="528" loading="lazy" decoding="async"></div>
+        <h4>Alta Vista</h4>
+        <p>Centro comercial Naraya, piso 1, local 123.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="wrap">
+    <div class="testi-h">
+      <span class="pre">HISTORIAS REALES DEL INTENSIVO</span>
+      <h2>De julio a septiembre, <b>otro mundo.</b></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="quote">
+        <span class="qm">"</span>
+        <span class="tag kid">NIÑO · 11 AÑOS</span>
+        <p>Mi hijo Daniel empezó el verano sin saber decir ni "hello". Terminó en septiembre presentándose en inglés en su clase del colegio. La maestra me llamó para preguntar qué había hecho diferente.</p>
+        <div class="who">
+          <div class="av"></div>
+          <div>
+            <div class="name">PATRICIA M.</div>
+            <div class="meta">MAMÁ DE DANIEL · CARACAS</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote">
+        <span class="qm">"</span>
+        <span class="tag adult">ADULTA · 42 AÑOS</span>
+        <p>Llevaba 10 años diciendo "el otro año aprendo inglés". Me metí al intensivo de verano y al final del programa estaba teniendo una entrevista de trabajo en inglés. Me cambió la vida en 8 semanas.</p>
+        <div class="who">
+          <div class="av"></div>
+          <div>
+            <div class="name">ANDREA G.</div>
+            <div class="meta">ADMINISTRADORA · VALENCIA</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote">
+        <span class="qm">"</span>
+        <span class="tag">ADOLESCENTE · 15 AÑOS</span>
+        <p>Hice el intensivo antes de empezar bachillerato. Llegué al colegio con un nivel que mis compañeros no tienen ni en cuarto año. El profesor de inglés me puso a leer en alto frente a la clase.</p>
+        <div class="who">
+          <div class="av"></div>
+          <div>
+            <div class="name">SEBASTIÁN R.</div>
+            <div class="meta">ESTUDIANTE · MARACAY</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <h2>PREGUNTAS <b>FRECUENTES</b></h2>
+    <div class="faq-list" id="faqList">
+      <div class="qa">
+        <div class="qrow"><p class="q">¿EL PROGRAMA ES PARA NIÑOS O ADULTOS?</p><span class="chev">▾</span></div>
+        <p class="a">Es para los dos. El mismo programa de 96 horas se adapta a la edad: grupos por edad (niños, adolescentes, adultos), mismo profesor certificado, misma metodología. Si tú quieres aprovechar el verano para ti y al mismo tiempo inscribir a tu hijo, podemos hacer descuentos familiares — pregunta por WhatsApp.</p>
+      </div>
+      <div class="qa">
+        <div class="qrow"><p class="q">¿LAS CLASES SON GRABADAS O EN VIVO?</p><span class="chev">▾</span></div>
+        <p class="a">100% en vivo, con profesor real, cámara prendida. No es una app, no es un curso pre-grabado, no son videos de YouTube. Es clase real por Zoom con tu profesor cada día.</p>
+      </div>
+      <div class="qa">
+        <div class="qrow"><p class="q">¿PUEDO EMPEZAR SI NO SÉ NADA DE INGLÉS?</p><span class="chev">▾</span></div>
+        <p class="a">Sí — el programa está diseñado exactamente para empezar de cero. El nivel introductorio (primeras 4 semanas) asume que no sabes nada y construye la base. Si ya sabes algo, el profesor te ubica donde corresponde.</p>
+      </div>
+      <div class="qa">
+        <div class="qrow"><p class="q">¿QUÉ PASA SI ME PIERDO UNA CLASE?</p><span class="chev">▾</span></div>
+        <p class="a">Las clases quedan registradas para repaso (no para sustituir la clase en vivo — la presencia es importante). Si pierdes una clase por motivos justificados, puedes recuperar viendo la grabación y resolviendo el material esa semana con el profesor.</p>
+      </div>
+      <div class="qa">
+        <div class="qrow"><p class="q">¿CÓMO ME INSCRIBO?</p><span class="chev">▾</span></div>
+        <p class="a">Escríbenos por WhatsApp. Te confirmamos disponibilidad de cupo en el turno que prefieras (mañana o tarde), te enviamos los datos de pago y al confirmar quedas inscrito. Cupos son limitados por grupo para garantizar atención personalizada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>El verano de 2026 <span class="y">pasa una sola vez.</span><br>Aprovéchalo <span class="g">en inglés.</span></h2>
+    <p>8 semanas. 96 horas. Cero a A1. <b>$960 los 2 niveles</b> (regular $1,920 · 50% dto. verano · libros aparte). Cupos limitados por grupo — si te interesa, escríbenos hoy por WhatsApp y te confirmamos disponibilidad en el turno que prefieras.</p>
+    <div class="row">
+      <button class="cta-pill whatsapp-link" type="button">
+        <span class="wa">
+          <img src="social-icons-WA Green.svg" alt="" width="16" height="16">
+        </span>
+        Quiero información del intensivo
+      </button>
+    </div>
+    <p class="meta">⏱ Respuesta por WhatsApp en menos de 10 minutos · Hablamos español · Fyr Lois Venezuela</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>© 2026 Fyr Lois · 27 años enseñando inglés · Programa Intensivo de Verano</div>
+    <div class="social-links">
+      <a class="whatsapp-link" href="https://wa.me/16893225402" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="social-icons-WA Green.svg" alt="WhatsApp"></a>
+      <a href="https://www.instagram.com/fyrlois?igsh=Z3pnczVlMGQ4Z3N6" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="social-icons- IG Green.svg" alt="Instagram"></a>
+      <a href="https://www.tiktok.com/@fyrlois.tips?_r=1&amp;_t=ZP-96O39pM8UwR" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><img src="social-icons.TK Green.svg" alt="TikTok"></a>
+    </div>
+  </div>
+</footer>
+
+<button class="wa-fab whatsapp-link" type="button" aria-label="WhatsApp">
+  <img src="social-icons-WA WT.svg" alt="" width="30" height="30">
+</button>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('#faqList .qa').forEach(qa=>{
+    qa.addEventListener('click', ()=> qa.classList.toggle('open'));
+  });
+
+  // Audience toggle (hero) — purely visual
+  document.querySelectorAll('#audToggleHero button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('#audToggleHero button').forEach(b=>{
+        b.classList.remove('active','kids');
+      });
+      btn.classList.add('active');
+      if(btn.dataset.aud==='kids') btn.classList.add('kids');
+      // scroll to pane section
+      const pane = btn.dataset.aud;
+      document.querySelectorAll('#audTabs button').forEach(b=>{
+        b.classList.remove('active','kids');
+        if(b.dataset.pane===pane){
+          b.classList.add('active');
+          if(pane==='kids') b.classList.add('kids');
+        }
+      });
+      document.querySelectorAll('.aud-pane').forEach(p=>{
+        p.classList.toggle('active', p.dataset.pane===pane);
+      });
+    });
+  });
+
+  // Audience tabs (section)
+  document.querySelectorAll('#audTabs button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const target = btn.dataset.pane;
+      document.querySelectorAll('#audTabs button').forEach(b=>{
+        b.classList.remove('active','kids');
+      });
+      btn.classList.add('active');
+      if(target==='kids') btn.classList.add('kids');
+      document.querySelectorAll('.aud-pane').forEach(p=>{
+        p.classList.toggle('active', p.dataset.pane===target);
+      });
+      // sync hero toggle
+      document.querySelectorAll('#audToggleHero button').forEach(b=>{
+        b.classList.remove('active','kids');
+        if(b.dataset.aud===target){
+          b.classList.add('active');
+          if(target==='kids') b.classList.add('kids');
+        }
+      });
+    });
+  });
+
+  // Cupos counter
+  const d1=document.getElementById('d1'), d2=document.getElementById('d2'), d3=document.getElementById('d3');
+  let cupos = parseInt(localStorage.getItem('flVeranoCupos')||'32',10);
+  function setCupos(n){
+    n = Math.max(2, Math.min(99, n));
+    cupos = n; localStorage.setItem('flVeranoCupos', n);
+    const s = String(n).padStart(3,'0');
+    d1.textContent = s[0]; d2.textContent = s[1]; d3.textContent = s[2];
+  }
+  setCupos(cupos);
+  setInterval(()=>{ if(Math.random() < 0.22){ setCupos(cupos - 1); } }, 26000);
+
+  // WhatsApp CTAs (+1 689 322-5402 — mismo canal que personalizado-ven)
+  const WA_NUMBER = '16893225402';
+  const WA_MSG = encodeURIComponent('Hola, me interesa el Programa Intensivo de Verano 2026 de Fyr Lois.');
+  document.querySelectorAll('.whatsapp-link').forEach(el=>{
+    el.addEventListener('click', e=>{
+      e.preventDefault();
+      window.open(`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`, '_blank');
+    });
+  });
+</script>
+</body>
+</html>
